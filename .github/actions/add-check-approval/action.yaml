@@ -1,0 +1,10 @@
+name: Add check approval workflow
+description: Add check approval workflow
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        set -eu
+        mkdir -p .github/workflows
+        cp "$GITHUB_ACTION_PATH/workflow.yaml" .github/workflows/check-approval.yaml
