@@ -8,11 +8,20 @@ This is a PoC to apply [validate-pr-review-action](https://github.com/suzuki-shu
 
 1. [Create a repository to manage GitHub Action and reusable workflows in your GitHub Organization](https://github.com/new?template_name=validate-pr-review-action&template_owner=szksh-lab)
 1. [Set up Securefix Action](https://github.com/csm-actions/securefix-action)
+
+If you don't want to use Securefix Action, you can use [commit-action](https://github.com/suzuki-shunsuke/commit-action), but we strongly recommend Securefix Action in terms of security.
+
 1. Fix workflows and actions
+
+Fix the action name:
 
 https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/add-check-approval.yaml#L13
 
+Fix the variable name and secret name of Securefix Action:
+
 https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/add-check-approval.yaml#L16-L17
+
+Fix the Securefix Action Server repository:
 
 https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/add-check-approval.yaml#L18
 
