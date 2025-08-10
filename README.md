@@ -21,9 +21,9 @@ Fix the action name:
 
 https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/.github/workflows/add-check-approval.yaml#L13
 
-https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/.github/workflows/check-approval.yaml#L18
-
 https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/add-check-approval/workflow.yaml#L18
+
+Copy add-checksum-approval/workflow.yaml to .github/workflows/check-approval.yaml
 
 Fix the variable name and secret name of Securefix Action:
 
