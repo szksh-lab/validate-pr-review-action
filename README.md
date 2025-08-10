@@ -12,7 +12,7 @@ This is a PoC to apply [validate-pr-review-action](https://github.com/suzuki-shu
 If you don't want to use Securefix Action, you can use [commit-action](https://github.com/suzuki-shunsuke/commit-action), but we strongly recommend Securefix Action in terms of security.
 
 3. Fix workflows and actions
-4. [Allow other repositories to use actions in this repository](https://docs.github.com/en/actions/how-tos/reuse-automations/share-with-your-organization)
+4. [Sharing actions and workflows with your organization](https://docs.github.com/en/actions/how-tos/reuse-automations/share-with-your-organization)
 5. [Configure Organization Rulesets](https://docs.github.com/en/enterprise-cloud@latest/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization)
 
 ### 3. Fix workflows and actions

@@ -10,7 +10,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           sparse-checkout: |
             .github/workflows
-      - uses: szksh-lab/validate-pr-review-action/.github/actions/add-check-approval@main
+      - uses: szksh-lab/validate-pr-review-action/add-check-approval@main
       - uses: csm-actions/securefix-action@05036cda4e1fcaeba401d23261056048fe20ba27 # v0.2.2
         with:
           app_id: ${{ vars.AUTOFIX_TRIGGER_APP_ID }}
