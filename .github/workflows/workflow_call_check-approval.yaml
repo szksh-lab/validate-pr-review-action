@@ -1,21 +1,7 @@
-name: Require approval
-# DONT EDIT THIS FILE DIRECTLY.
-# This file is managed by the organization's required workflow.
-#
-# This workflow is triggered when a pull request review is submitted.
-# It prevents self-approvals.
-# It fails if no one who didn't push commits to the pull request approves the pull request
-# It also fails if a commit isn't linked to a GitHub User.
-# See also:
-# - https://github.com/suzuki-shunsuke/validate-pr-review-action
-on:
-  pull_request_review:
-    types:
-      - submitted
-      - dismissed
+name: Check approval
+on: workflow_call
 jobs:
-  require-approval:
-    # Add this job to branch ruleset's required checks.
+  check-approval:
     timeout-minutes: 10
     runs-on: ubuntu-24.04
     permissions:
