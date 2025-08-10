@@ -1,6 +1,6 @@
 # validate-pr-review-action
 
-[MIT LICENSE](LICENSE)
+[MIT](LICENSE)
 
 This is a PoC to apply [validate-pr-review-action](https://github.com/suzuki-shunsuke/validate-pr-review-action) to GitHub Organization's entire repositories by Required Workflows.
 
@@ -19,7 +19,11 @@ If you don't want to use Securefix Action, you can use [commit-action](https://g
 
 Fix the action name:
 
-https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/add-check-approval.yaml#L13
+https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/.github/workflows/add-check-approval.yaml#L13
+
+https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/.github/workflows/check-approval.yaml#L18
+
+https://github.com/szksh-lab/validate-pr-review-action/blob/ba745b157a7ad09b7370318bfb52557edb76c64b/add-check-approval/workflow.yaml#L18
 
 Fix the variable name and secret name of Securefix Action:
 
