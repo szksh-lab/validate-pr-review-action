@@ -25,9 +25,11 @@ Fix the Securefix Action Server repository:
 
 https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/add-check-approval.yaml#L18
 
-JavaScipt to configure validate-pr-review-action:
+JavaScript to configure validate-pr-review-action:
 
 https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/workflow_call_check-approval.yaml#L12-L67
+
+:bulb: The maintainability of this JavaScript is not so good, so it's good to build JavaScript Action using TypeScript.
 
 (Optional) GitHub Actions Runner:
 
