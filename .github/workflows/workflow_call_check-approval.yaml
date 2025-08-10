@@ -1,0 +1,73 @@
+name: Check approval
+on: workflow_call
+jobs:
+  check-approval:
+    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: read # To get pull requests
+      contents: read # To list commits in pull requests
+    steps:
+      # Customize inputs of validate-pr-review-action per repository.
+      - id: param
+        name: Set parameters
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          script: |
+            // base config.
+            // All configs like defaultConfig are merged with baseConfig.
+            const baseConfig = {
+              trusted_apps: [
+                "renovate",
+                "dependabot",
+              ],
+              untrusted_machine_users: [
+                "readonly",
+              ]
+            };
+
+            // Default config.
+            // The current default config is loose.
+            // TODO We will need to make this strict after migrating untrusted machine users and apps to trusted machine users and apps.
+            const defaultConfig = {
+              trusted_apps: [
+                "suzuki-shunsuke-app",
+                "github-actions",
+              ],
+              untrusted_machine_users: [],
+            };
+
+            // Ideal config.
+            // In addition to the base config, some machine users are untrusted.
+            const idealConfig = {
+              trusted_apps: [],
+              untrusted_machine_users: [
+                "*bot",
+                "hoge-ci",
+              ],
+            };
+
+            // Customize config for each repository
+            // The key is the repository name.
+            const customConfigs = {
+              "foo": idealConfig,
+              "bar": {
+                trusted_apps: [
+                  "bar-ci",
+                ],
+                untrusted_machine_users: idealConfig.untrusted_machine_users,
+              },
+            };
+
+            const returnConfig = (cfg) => ({
+              trusted_apps: baseConfig.trusted_apps.concat(cfg.trusted_apps || []).join("\n"),
+              untrusted_machine_users: baseConfig.untrusted_machine_users.concat(cfg.untrusted_machine_users || []).join("\n"),
+            });
+
+            return returnConfig(customConfigs[context.repo.repo] || defaultConfig);
+
+      - name: Validate PR reviews
+        uses: suzuki-shunsuke/validate-pr-review-action@0c25fcf52b765e1d27fdc9dac0d3c7f854a009f2 # v0.0.8
+        with:
+          trusted_apps: ${{fromJSON(steps.param.outputs.result).trusted_apps}}
+          untrusted_machine_users: ${{fromJSON(steps.param.outputs.result).untrusted_machine_users}}
