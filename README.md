@@ -35,9 +35,7 @@ https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26
 
 JavaScript to configure validate-pr-review-action:
 
-https://github.com/szksh-lab/validate-pr-review-action/blob/1aaefbf3e55b0a589a26fd54e9d966b6055c8253/.github/workflows/workflow_call_check-approval.yaml#L12-L67
-
-:bulb: The maintainability of this JavaScript is not so good, so it's good to build JavaScript Action using TypeScript.
+https://github.com/szksh-lab/validate-pr-review-action/blob/0dc3a66b16ab1a9331cafded16fa6e120f3c9c3b/get-config/main.js#L1-L54
 
 (Optional) GitHub Actions Runner:
 
