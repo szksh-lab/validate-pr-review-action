@@ -11,7 +11,7 @@ jobs:
           sparse-checkout: |
             .github/workflows
       - uses: szksh-lab/validate-pr-review-action/add-check-approval@main
-      - uses: csm-actions/securefix-action@4f3e711a06d7d5a3f5527cc622f6c75362fec74b # v0.3.6
+      - uses: csm-actions/securefix-action@949d3cfb554abee10f695014674759978ba8ba34 # v0.4.1
         with:
           app_id: ${{ vars.AUTOFIX_TRIGGER_APP_ID }}
           app_private_key: ${{ secrets.AUTOFIX_TRIGGER_APP_PRIVATE_KEY }}
