@@ -14,7 +14,7 @@ jobs:
         uses: szksh-lab/validate-pr-review-action/get-config@main
 
       - name: Validate PR reviews
-        uses: suzuki-shunsuke/validate-pr-review-action@d669878cee0861a83a7323bb7ae9401fd234a597 # v0.0.10
+        uses: suzuki-shunsuke/validate-pr-review-action@1756bee8b02dcf855ebab6049b6eff60e9b40bd0 # v0.0.11
         with:
           trusted_apps: ${{steps.param.outputs.trusted_apps}}
           trusted_machine_users: ${{steps.param.outputs.trusted_machine_users}}
