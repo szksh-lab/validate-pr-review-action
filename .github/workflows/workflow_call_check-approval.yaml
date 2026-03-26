@@ -11,7 +11,7 @@ jobs:
       # Customize inputs of validate-pr-review-action per repository.
       - id: param
         name: Set parameters
-        uses: szksh-lab/validate-pr-review-action/get-config@main
+        uses: szksh-lab/validate-pr-review-action/get-config@92aee4aaa1aeaf19aae57cc719a6308e67e225a7 # main
 
       - name: Validate PR reviews
         uses: suzuki-shunsuke/validate-pr-review-action@1756bee8b02dcf855ebab6049b6eff60e9b40bd0 # v0.0.11
